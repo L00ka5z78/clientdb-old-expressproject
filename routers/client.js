@@ -45,9 +45,11 @@ clientRouter
     //update one client
 
     .put('/:id', async (req, res) => {
-        const client = await ClientRecord.getOne(req.params.id)
-        await client.update();
+        const client = await ClientRecord.getOne(req.params.id);
 
+
+
+        // await client.update();
 
         res.render('client/modified.hbs', {
             // client: req.body.name,
