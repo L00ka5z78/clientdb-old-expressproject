@@ -1,8 +1,4 @@
 
-bledy:
-przy delete:
-TypeError: ClientRecord.delete is not a function
-
 przy edycji, update.
 
 Wyswietla widok edycji, ale nie wyswietla danych edytowanego klienta: id, name itp
