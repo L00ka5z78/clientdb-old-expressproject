@@ -1,13 +1,27 @@
+
+bledy:
+przy delete:
+TypeError: ClientRecord.delete is not a function
+
+przy edycji, update.
+
+Wyswietla widok edycji, ale nie wyswietla danych edytowanego klienta: id, name itp
+przy próbie zapisania zmodyfikowanego rekordu wyświetla: Cannot PUT /client/
+
+
+
+plik client-records.js z zakomentowaną walidacją. Wstwię pod koniec w odpowiednie miejsca
+plik client.js rowniez z kilkoma zakomentowanymi linijkami. 
+
+Query stringi z pliku client-record.js raczej poprawne choć głowy za to nie dam.
+
+
+Stary projekt z etapu express. Przepisać na mysql a potem na TS.
+
+
+
 ***!! katalog node_modules not included ***!!
 ****************************************
-baza klientow crm            ***********
-****************************************
-gdyby handelbarsy nie dzialaly
-to instalujemy:
-npm i express-handlebars@5.3.4
-****************************************
-
-
 stworzyc baze klientow
 
 przechowujemy ich imiona, maile, notatki i informacje
