@@ -1,0 +1,64 @@
+<div class="container">
+    <h2 class="gray-header">Client: {{client.name}}</h2>
+</div>
+
+<div class="container one-customer">
+    <table class="header-of-left">
+        <tbody>
+        <tr>
+            <th class="gray-header">
+                E-mail:
+            </th>
+            <td>
+                <a href="mailto:{{client.mail}}" target="_blank">{{client.mail}}</a>
+            </td>
+
+        </tr>
+        <tr>
+            <th class="gray-header">
+                Name:
+            </th>
+            <td>
+                {{client.name}}
+            </td>
+        </tr>
+        <tr>
+            <th class="gray-header">
+                Next contact at:
+            </th>
+            <td>
+                {{client.nextContactAt}}
+            </td>
+        </tr>
+        {{#if client.notes}}
+            <tr>
+                <th class="gray-header">
+                    Notes:
+                </th>
+                <td>
+                    {{client.notes}}
+                </td>
+            </tr>
+        {{/if}}
+
+
+        </tbody>
+
+    </table>
+
+    <p>
+    <form method="GET" action="/client/form/edit/{{client.id}}">
+        <button type="submit" class="btn-large">Edit Client</button>
+    </form>
+    </p>
+
+    <p>
+    <form method="POST" action="/client/{{client.id}}?_method=DELETE">
+        <button type="submit" class="btn-large">Delete</button>
+    </form>
+    </p>
+
+      <div class="form">
+        {{> go-to-clients}}
+    </div>
+</div>

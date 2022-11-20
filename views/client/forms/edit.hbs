@@ -1,0 +1,51 @@
+
+<div class="container">
+    <h2 class="gray-header">Editing {{client.name}}</h2>
+    <p class="small">id: {{client.id}}</p>
+    <form method="POST" action="/client/{{client.id}}?_method=PUT">
+        <div class="form">
+            <label>
+                <p>
+                    E-mail:
+                </p>
+                <p>
+                    <input type="email" name="mail" value="{{client.mail}}">
+                </p>
+
+            </label>
+            <label>
+                <p>
+                    Name:
+                </p>
+                <p>
+                    <input type="text" name="name"  value="{{client.name}}">
+                </p>
+
+            </label>
+            <label>
+                <p>
+                    Next contact date:
+                </p>
+                <p>
+                    <input type="date" name="nextContactAt"  value="{{client.nextContactAt}}">
+                </p>
+
+            </label>
+            <label>
+                <p>
+                    Notes:
+                </p>
+                <p>
+                    <textarea name="notes">{{client.notes}}</textarea>
+                </p>
+            </label>
+
+            <button type="submit" class="btn btn-success">Save</button>
+
+        </div>
+        <div class="form">
+            {{> go-to-clients}}
+        </div>
+    </form>
+
+</div>

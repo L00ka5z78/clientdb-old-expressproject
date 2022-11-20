@@ -1,0 +1,90 @@
+
+h2, h1 {
+    text-align: center;
+    padding: 15px;
+}
+
+table {
+    text-align: center;
+    width: 80%;
+    margin: 0 auto ;
+}
+td th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+thead {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #111a75;
+    color: white;
+}
+
+tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+tr:hover {
+    background-color: #ddd;
+}
+p {
+
+}
+
+a {
+    text-decoration-color: #04AA6D;
+    color: black;
+}
+
+.one-customer tr:nth-child(even) {
+    background-color: #469a0e;
+}
+
+.one-customer tr:hover {
+    background-color: #eaad12;
+}
+
+
+.gray-header {
+    background-color: #f2f2f2;
+}
+/*thead tr .header-of-left th{*/
+/*    background: #7be107;*/
+/*}*/
+
+.btn {
+
+}
+
+.btn-large {
+    height: 30px;
+    margin-top: 10px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.form {
+    border: 2px solid #ddd;
+    border-radius: 0.5em;
+    width: 300px;
+    text-align: center;
+    padding: 20px;
+    margin: 30px auto 0;
+}
+
+
+input, textarea {
+    width: 220px;
+}
+.error {
+    background: #f12121;
+    border: 3px solid darkred;
+    padding: 10px;
+    margin: 10px auto;
+    width: 80%;
+}
+.small {
+    font-size: 0.9rem;
+    text-align: center;
+}

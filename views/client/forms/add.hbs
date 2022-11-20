@@ -1,0 +1,50 @@
+<div class="container">
+
+<h2 class="gray-header">Adding new client to the base</h2>
+<form method="POST" action="/client">
+    <div class="form">
+    <label>
+        <p>
+            E-mail:
+        </p>
+        <p>
+            <input type="email" name="mail" required>
+        </p>
+
+    </label>
+    <label>
+        <p>
+           Name:
+        </p>
+        <p>
+            <input type="text" name="name">
+        </p>
+
+    </label>
+    <label>
+        <p>
+           Next contact date:
+        </p>
+        <p>
+            <input type="date" name="nextContactAt">
+        </p>
+
+
+    </label>
+    <label>
+        <p>
+          Notes:
+        </p>
+        <p>
+            <textarea name="notes"></textarea>
+        </p>
+    </label>
+    <p>
+        <button type="submit" class="btn">Save</button>
+    </p>
+    </div>
+</form>
+    <div class="form">
+        {{> go-to-clients}}
+    </div>
+</div>
