@@ -59,16 +59,13 @@ class ClientRecord {
         });
     }
 
-    // D for delete
+    // Delete
 
     async delete() {
         await pool.execute("DELETE FROM `clients` WHERE `id` = :id", {
-            id,
+            id: this.id,
         })
     }
-
-
-
 }
 
 module.exports = {

@@ -46,21 +46,23 @@ clientRouter
 
     .put('/:id', async (req, res) => {
         const client = await ClientRecord.getOne(req.params.id)
+        await client.update();
+
 
         res.render('client/modified.hbs', {
-            client: req.body.name,
-            client: req.params.id,
+            // client: req.body.name,
+            client: req.params.id
         });
-        await client.update();
+
         // res.redirect('/client');
     })
 
 
     .get('/form/edit/:id', (req, res) => {
         const client = ClientRecord.getOne(req.params.id);
-        // if (!client) {
-        //     throw new NotFoundError();
-        // }
+        if (!client) {
+            throw new NotFoundError();
+        }
         res.render('client/forms/edit.hbs', {
             client,
         });
@@ -69,8 +71,11 @@ clientRouter
     // delete one client
 
     .delete('/:id', async (req, res) => {
-
-
+        const client = await ClientRecord.getOne(req.params.id);
+        if (!client) {
+            throw new NotFoundError();
+        }
+        await client.delete()
 
         res.render('client/deleted.hbs', {
             client,
@@ -80,8 +85,8 @@ clientRouter
 
 
 // .put('/:id', (req, res) => {
-//     // modify one from db and display on home page with given id
-//     db.update(req.params.id, req.body)              //client (not 'this') in one.hbs  client.name etc
+//    
+//     db.update(req.params.id, req.body)            
 
 //     res.render('client/modified.hbs', {
 //         name: req.body.name,
@@ -89,19 +94,13 @@ clientRouter
 //     });
 // })
 
-// .delete('/:id', (req, res) => {
-//     //delete one from db  with given id
-//     db.delete(req.params.id);                       //client (not 'this') in one.hbs  client.name etc
-//     res.render('client/deleted.hbs');               // client directory renders deleted.hbs file
-// })
 
-
-// .get('/form/edit/:id', (req, res) => {               // modify one from db and display on home page with given id
-//     const client = db.getOne(req.params.id);         //client (not 'this') in one.hbs  client.name etc
+// .get('/form/edit/:id', (req, res) => {               
+//     const client = db.getOne(req.params.id);        
 //     if (!client) {
 //         throw new NotFoundError();
 //     }
-//     res.render('client/forms/edit.hbs', {           // path client/forms/ renders edit.hbs file.
+//     res.render('client/forms/edit.hbs', {          
 //         client,
 //     });
 // })
