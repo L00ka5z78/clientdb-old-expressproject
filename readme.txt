@@ -13,7 +13,7 @@ przy próbie zapisania zmodyfikowanego rekordu wyświetla: Cannot PUT /client/
 plik client-records.js z zakomentowaną walidacją. Wstwię pod koniec w odpowiednie miejsca
 plik client.js rowniez z kilkoma zakomentowanymi linijkami. 
 
-
+Query stringi z pliku client-record.js raczej poprawne choć głowy za to nie dam.
 
 
 Stary projekt z etapu express. Przepisać na mysql a potem na TS.
