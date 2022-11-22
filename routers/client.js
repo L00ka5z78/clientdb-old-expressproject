@@ -46,17 +46,13 @@ clientRouter
 
     .put('/:id', async (req, res) => {
         const client = await ClientRecord.getOne(req.params.id);
+        client = req.params.id
+        await client.update()
 
-
-
-        // await client.update();
 
         res.render('client/modified.hbs', {
-            // client: req.body.name,
-            client: req.params.id
+            client
         });
-
-        // res.redirect('/client');
     })
 
 
@@ -65,6 +61,7 @@ clientRouter
         if (!client) {
             throw new NotFoundError();
         }
+
         res.render('client/forms/edit.hbs', {
             client,
         });
