@@ -44,9 +44,24 @@ clientRouter
 
     //update one client
 
+    // .put('/:id', async (req, res) => {
+    //     const client = await ClientRecord.getOne(req.params.id);
+    //     client = req.params.id
+    //     await client.update()
+
+
+    //     res.render('client/modified.hbs', {
+    //         client
+    //     });
+    // })
+
     .put('/:id', async (req, res) => {
         const client = await ClientRecord.getOne(req.params.id);
-        client = req.params.id
+        client.id = req.body.id;
+        client.name = req.body.name;
+        client.mail = req.body.mail;
+        client.nextContactAt = req.body.nextContactAt;
+        client.notes = req.body.notes
         await client.update()
 
 

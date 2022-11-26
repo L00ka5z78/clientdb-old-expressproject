@@ -51,11 +51,12 @@ class ClientRecord {
     // Update
 
     async update() {
-        await pool.execute("UPDATE `clients` SET `name` = :name,  `mail` = :mail, `nextContactAt` = :nextContactAt, `notes` = :notes WHERE ", {
+        await pool.execute("UPDATE `clients` SET `name` = :name,  `mail` = :mail, `nextContactAt` = :nextContactAt, `notes` = :notes WHERE  `id` = :id", {
+            id: this.id,
             name: this.name,
             mail: this.mail,
             nextContactAt: this.nextContactAt,
-            note: this.notes,
+            notes: this.notes,
         });
     }
 
