@@ -6,6 +6,10 @@ class ClientRecord {
     constructor(obj) {
         const { id, name, mail, nextContactAt, notes } = obj;
 
+        if (!id || typeof id !== "string") {
+            throw new ValidationError("Invalid or none ID")
+        }
+
         if (!obj.name || typeof obj.name !== 'string' || obj.name.length < 3 || obj.name > 55) {
             throw new ValidationError('Name has to be text at least 3 and less than 55 characters long')
         }

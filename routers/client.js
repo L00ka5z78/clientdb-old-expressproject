@@ -61,8 +61,8 @@ clientRouter
     })
 
 
-    .get('/form/edit/:id', (req, res) => {
-        const client = ClientRecord.getOne(req.params.id);
+    .get('/form/edit/:id', async (req, res) => {
+        const client = await ClientRecord.getOne(req.params.id);
         if (!client) {
             throw new NotFoundError();
         }
