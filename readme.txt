@@ -14,10 +14,15 @@ mozna wyswietlac, usuwac, dodawac i modyfikowac rekordy.
 zastosuj CRUD (create, read, update, delete)
 stworz poprawna architekture RESTOWa
 
-NIE korzystamy z ciastek. przechowujemy na serwerze, aby miec
-dostep do bazy klientow w kazdej chwili i z kazdego urzadzenia
 
-stworz mechanizm oop do przechowywania danych w pliku JSON
+**************  edit   **********22.12.22
+przepisane na mysql**********************
+*****************************************
+
+  //  NIE korzystamy z ciastek. przechowujemy na serwerze, aby miec
+  //  dostep do bazy klientow w kazdej chwili i z kazdego urzadzenia
+
+  //stworz mechanizm oop do przechowywania danych w pliku JSON
 
 dodac walidacje w pojedynczym rekordzie. Lapiemy bledy na
 zewnatrz. Uzyc odpowiednie kody http
